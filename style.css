@@ -12,7 +12,7 @@
     align-items: center;
    
     font-family: "Anton", sans-serif;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background: radial-gradient(ellipse at bottom, #396eab 0%, #071144 100%);
   }
   
   .horizontal {
@@ -27,19 +27,13 @@
     border: 10px solid var(--base-color);
     font-size: 4rem;
     cursor: pointer;
+    overflow: hidden;
   }
   .horizontal  .text {
     position: relative;
     color: transparent;
-  
-     background-image: linear-gradient(90deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%); 
-    background-repeat: repeat;
-    background-size: 200%;
-    background-position: 100% 0;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-transition: background-position 300ms;
-    transition: background-position 300ms;
+    color: #fff; 
+    transition: all .3s;
   }
   .horizontal::before {
     content: "";
@@ -50,26 +44,21 @@
     height: 100%;
     background: var(--base-color);
     transform-origin: 100% 0;
-    transform: scale3d(0, 1, 1);
+    transform: scale3d(0,1,1);
     transition: transform 300ms;
-    transition: transform 300ms;
-    transition: transform 300ms, -webkit-transform 300ms;
   }
   .horizontal:hover .text {
-    background-position: 0 0;
+    color: #000;
   }
   .horizontal:hover::before {
-    transform-origin: 0 0;
-    transform: scale3d(1, 1, 1);
+    transform-origin:0 0 ;
+    transform: scale3d(1,1,1);
   }
   
   .vertical {
-    display: -webkit-box;
     display: flex;
-    -webkit-box-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 400px;
     height: 120px;
@@ -78,18 +67,10 @@
     font-size: 4rem;
     cursor: pointer;
   }
-  .vertical > .text {
-    position: relative;
-    color: transparent;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(var(--hover-color)), color-stop(50%, var(--hover-color)), color-stop(50%, var(--base-color)), to(var(--base-color)));
-    background-image: linear-gradient(0deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
-    background-repeat: repeat;
-    background-size: 100% 200%;
-    background-position: 0 0;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-transition: background-position 300ms;
-    transition: background-position 300ms;
+  .vertical .text {
+   position: relative;
+   color: #fff;
+   transition: all .3s;
   }
   .vertical::before {
     content: "";
@@ -99,22 +80,15 @@
     width: 100%;
     height: 100%;
     background: var(--base-color);
-    -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-    -webkit-transform: scale3d(1, 0, 1);
-            transform: scale3d(1, 0, 1);
-    -webkit-transition: -webkit-transform 300ms;
-    transition: -webkit-transform 300ms;
-    transition: transform 300ms;
-    transition: transform 300ms, -webkit-transform 300ms;
+    transform-origin: 0 0;
+    transform: scale3d(1, 0, 1);
+    transition: all .3s;
   }
   .vertical:hover .text {
-    background-position: 0 100%;
+   color: #000;
   }
   .vertical:hover::before {
-    -webkit-transform-origin: 0 100%;
-            transform-origin: 0 100%;
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    transform-origin: 0 100%; 
+    transform: scale3d(1, 1, 1);
   }
   
